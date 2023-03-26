@@ -1,0 +1,19 @@
+ <div class="border-bottom row" style="padding-bottom: 10px;">
+
+    <div class="col-10">
+        <div class="lead fw-bold mt-2">{{job['Title']}}</div>
+        <div><b>Location:</b> {{job['Location']}}</div>
+
+        {% if 'Salary' in job %}
+
+        <div class="mb-2"><b>Salary:</b> {{job['Salary']}}</div>
+    </div>
+    {% endif %}
+
+    <div class="col-2">
+
+        <a href="mailto:bukhulubakhe@gmail.com?subject=Application for {{job['Title']}}" type="button" class="btn btn-outline-primary mt-4"> Apply </a>
+
+    </div>
+
+</div>
