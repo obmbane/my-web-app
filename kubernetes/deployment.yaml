@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: careers-web-app-deployment
+  labels:
+    app: web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels: 
+        app: web
+    spec:
+      containers:
+      - name: careers-web-app
+        image: py-web-app:1.0
+        ports:
+        - containerPort: 5000
